@@ -1,0 +1,28 @@
+html {
+	background-color:grey; /*To show we have initialised correctly, to remove before live*/
+}
+
+#tpp_menu {
+	opacity:0; /*Start invisible*/
+	background-color:white;
+	position:absolute;
+	top:0;
+	right:30px;
+	font-family:monospace;
+	font-size:40px;
+	border:5px solid black;
+}
+
+#tpp_menu ul {
+	display:inline-block;
+	list-style: none;
+	padding:0 20px;
+}
+
+#tpp_menu ul li {
+
+}
+
+#tpp_menu ul li.selected:before {
+	content: "\25ba\00a0";
+}
