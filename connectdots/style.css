@@ -1,0 +1,11 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(67, 94, 105);
+}
+
+canvas {
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.5;
+}
