@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+body, textarea {
+	font-family: monospace;
+}
+
+div.input, div.output {
+	display: inline-block;
+	width: 50%;
+	padding: 1%;
+	float: left;
+}
+
+textarea {
+	width: 100%;
+	height: 10rem;
+}
