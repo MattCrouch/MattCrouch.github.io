@@ -164,9 +164,13 @@ window.onload = (function() {
 		var instructions = inputTxt.value.split("\n");
 
 		for(var i = 0; i < instructions.length; i++) {
-			var instruction = instructions[i].trim();
+			var instruction = instructions[i];
 
-			if(instruction === "") {
+			if(instruction !== undefined) {
+				instruction.trim();
+			}
+
+			if(instruction === undefined || instruction === "") {
 				//Blank instruction
 				continue;
 			}
@@ -184,10 +188,21 @@ window.onload = (function() {
 			}
 
 			//Process the initial location and movement instructions for this robot
-			i++;
-			var nextInstruction = instructions[i].trim();
+			var nextInstruction = instructions[i+1];
+
+			if(nextInstruction !== undefined) {
+				nextInstruction.trim();
+			}
+
+			if(nextInstruction === undefined || nextInstruction === "") {
+				//Blank instruction
+				continue;
+			}
 
 			processRobot(instruction, nextInstruction);
+
+			//Offset for nextInstruction in loop
+			i++;
 		}
 
 		//Display the final outcome
