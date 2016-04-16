@@ -17,7 +17,14 @@ var Sketch = (function(canvas, color, width) {
     
     _canvas.addEventListener("mousedown", _mouseDown);
     
+   /*
+    * Gets the current position of the mouse within a given element
+    * @param {MouseEvent} event
+    * @param {Element} element
+    * @return {Object} coordinates
+    */
     function getMousePosition(event, element) {
+        console.log(element);
         var x, y;
         if (event.pageX != undefined && event.pageY != undefined) {
             x = event.pageX;
@@ -33,6 +40,10 @@ var Sketch = (function(canvas, color, width) {
         };
     };
     
+    /*
+    * Sets up event listeners to detect drawing
+    * @param {MouseEvent} event
+    */
     function _mouseDown(event) {
         var position = getMousePosition(event, _canvas);
         _context.moveTo(position.x, position.y);
@@ -43,31 +54,50 @@ var Sketch = (function(canvas, color, width) {
         _canvas.addEventListener("mouseout", _stopDrawing);
     };
     
+    /*
+    * Draws to the canvas
+    * @param {MouseEvent} event
+    */
     function _draw(event) {
         var position = getMousePosition(event, _canvas);
         _context.lineTo(position.x, position.y);
         _context.stroke();
     };
     
+    /*
+    * Disables event listeners that draw on canvas
+    */
     function _stopDrawing(event) {
         _canvas.removeEventListener("mousemove", _draw);
         _canvas.removeEventListener("mouseup", _stopDrawing);
         _canvas.removeEventListener("mouseout", _stopDrawing);
     };
    
+    /*
+    * Generates a copy of the canvas at a given time
+    * @return {String} dataUrl
+    */
     function getDrawing() {
         return _canvas.toDataURL();
     };
     
+    /*
+    * Clears the canvas
+    */
     function clear() {
         _canvas.width = _canvas.width;
-        return true;
     }
     
+    /*
+    * Sets the ink colour for drawing
+    */
     function setColor(color) {
         _context.strokeStyle = color;
     }
     
+    /*
+    * Clears the brush width
+    */
     function setWidth(width) {
         _context.lineWidth = width;   
     }
