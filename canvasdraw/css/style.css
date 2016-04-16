@@ -1,0 +1,18 @@
+html {
+    background-color: #444;
+}
+
+#pad {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    cursor: crosshair;
+}
+
+#controls {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
