@@ -1,10 +1,19 @@
-var Sketch = (function(canvas) {
+var Sketch = (function(canvas, color, width) {
     var _canvas = canvas;
     canvas.width = _canvas.clientWidth;
     canvas.height = _canvas.clientHeight;
     var _context = _canvas.getContext("2d");
-    _context.lineWidth = 2;
-    _context.strokeStyle = "#000000";
+    
+    if(typeof color === "undefined") {
+        color = "#000000";
+    }
+    
+    if(typeof width === "undefined") {
+        width = 1;
+    }
+    
+    _context.strokeStyle = color;
+    _context.lineWidth = width;
     
     _canvas.addEventListener("mousedown", _mouseDown);
     
@@ -36,7 +45,6 @@ var Sketch = (function(canvas) {
     
     function _draw(event) {
         var position = getMousePosition(event, _canvas);
-        console.log(position);
         _context.lineTo(position.x, position.y);
         _context.stroke();
     };
