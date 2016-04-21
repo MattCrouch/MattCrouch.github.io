@@ -14,6 +14,6 @@
     });
 	
     clear.addEventListener("click", function(event) {
-        pad.clear(); 
+        pad.clear();
     });
 })();

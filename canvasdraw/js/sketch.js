@@ -16,6 +16,7 @@ var Sketch = (function(canvas, color, width) {
     _context.lineWidth = width;
     
     _canvas.addEventListener("mousedown", _mouseDown);
+    _canvas.addEventListener("touchstart", _mouseDown);
     
    /*
     * Gets the current position of the mouse within a given element
@@ -24,9 +25,8 @@ var Sketch = (function(canvas, color, width) {
     * @return {Object} coordinates
     */
     function getMousePosition(event, element) {
-        console.log(element);
         var x, y;
-        if (event.pageX != undefined && event.pageY != undefined) {
+        if (event.pageX !== undefined && event.pageY !== undefined) {
             x = event.pageX;
             y = event.pageY;
         } else {
@@ -38,40 +38,49 @@ var Sketch = (function(canvas, color, width) {
             x: x - element.offsetLeft,
             y: y - element.offsetTop
         };
-    };
+    }
     
     /*
     * Sets up event listeners to detect drawing
     * @param {MouseEvent} event
     */
     function _mouseDown(event) {
+        event.preventDefault();
         var position = getMousePosition(event, _canvas);
         _context.moveTo(position.x, position.y);
         _context.beginPath();
         
         _canvas.addEventListener("mousemove", _draw);
+        _canvas.addEventListener("touchmove", _draw);
         _canvas.addEventListener("mouseup", _stopDrawing);
+        _canvas.addEventListener("touchend", _stopDrawing);
         _canvas.addEventListener("mouseout", _stopDrawing);
-    };
+        _canvas.addEventListener("touchleave", _stopDrawing);
+    }
     
     /*
     * Draws to the canvas
     * @param {MouseEvent} event
     */
     function _draw(event) {
+        event.preventDefault();
         var position = getMousePosition(event, _canvas);
         _context.lineTo(position.x, position.y);
         _context.stroke();
-    };
+    }
     
     /*
     * Disables event listeners that draw on canvas
     */
     function _stopDrawing(event) {
+        event.preventDefault();
         _canvas.removeEventListener("mousemove", _draw);
+        _canvas.removeEventListener("touchmove", _draw);
         _canvas.removeEventListener("mouseup", _stopDrawing);
+        _canvas.removeEventListener("touchend", _stopDrawing);
         _canvas.removeEventListener("mouseout", _stopDrawing);
-    };
+        _canvas.removeEventListener("touchleave", _stopDrawing);
+    }
    
     /*
     * Generates a copy of the canvas at a given time
@@ -79,7 +88,7 @@ var Sketch = (function(canvas, color, width) {
     */
     function getDrawing() {
         return _canvas.toDataURL();
-    };
+    }
     
     /*
     * Clears the canvas
@@ -99,7 +108,7 @@ var Sketch = (function(canvas, color, width) {
     * Clears the brush width
     */
     function setWidth(width) {
-        _context.lineWidth = width;   
+        _context.lineWidth = width;
     }
     
     return {
@@ -107,5 +116,5 @@ var Sketch = (function(canvas, color, width) {
         clear: clear,
         setColor: setColor,
         setWidth: setWidth
-    }
+    };
 });
