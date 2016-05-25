@@ -1,0 +1,43 @@
+section {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+}
+
+section:not(#intro) h1 {
+    display: inline-block;
+}
+
+button {
+    float: right;
+    padding: 1em 2em;
+    font-size: 1em;
+    font-family: inherit;
+    border: none;
+    background-color: #197c1d;
+    color: white;
+    text-align: center;
+}
+
+button:disabled {
+    background-color: #57473d;
+}
+
+button:focus:enabled, button:hover:enabled {
+    background-color: #4caf50;
+}
+
+thead, tfoot {
+    font-weight: bold;
+}
+
+#no_performance_mark {
+    color: red;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
