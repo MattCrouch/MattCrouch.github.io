@@ -1,0 +1,37 @@
+h1 {
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+}
+
+.container {
+    padding: 0 1em;
+}
+
+ul.meta {
+    list-style: none;
+    padding: 0;
+    color: #b0b0b0;
+}
+
+ul.meta li {
+    display: inline-block;
+}
+
+section.post {
+    margin: 2em 0;
+}
+
+section.post img {
+    border: 5px solid black;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    section.post {
+        margin: 1em 0;
+    }
+
+}

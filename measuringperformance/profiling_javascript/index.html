@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Profiling JavaScript with performance.mark()</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css">
+		<link rel="stylesheet" type="text/css" href="../main.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<section id="intro">
+				<h1>Profiling JavaScript with performance.mark()</h1>
+				<p>In each example, we will run a test 10 times, calculate how long each test took to run and take an average of those times.</p>
+				<p>Each test creates 250,000 "creatures" in a loop and if it finds a "big" creature, will return it.</p>
+				<p>Times are taken using <code>performance.mark()</code>, which provides a <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp">DOMHighResTimeStamp</a></code> in milliseconds. On modern machines this will be accurate to up to 5 microseconds, but lower-powered devices will report to the nearest microsecond. Quick results can take less than a microsecond, so would show as taking no time at all.</p>
+				<p><strong>Also note:</strong> As this is deliberately inefficient code running on the main thread your browser may grind to a halt while this is running.</p>
+				<p id="no_performance_mark">Your browser does not support performance.mark(), so these examples will not work.</p>				
+			</section>
+			
+			<section>
+				<h1>Example 1</h1>
+				<button id="example_1_run">Run</button>
+				
+				<div class="description">
+					<p>Poorly created JavaScript</p>
+				</div>
+				
+				<table id="example_1_results">
+					<thead>
+						<tr>
+							<th>Run</th>
+							<th>Time Taken</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td>Median</td>
+							<td class="median"></td>
+						</tr>
+					</tfoot>
+					<tbody></tbody>
+				</table>
+			</section>
+			
+			<section>
+				<h1>Example 2</h1>
+				<button id="example_2_run">Run</button>
+				
+				<div class="description">
+					<p>Optimised code</p>
+				</div>
+				
+				<table id="example_2_results">
+					<thead>
+						<tr>
+							<th>Run</th>
+							<th>Time Taken</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td>Median</td>
+							<td class="median"></td>
+						</tr>
+					</tfoot>
+					<tbody></tbody>
+				</table>
+			</section>
+		</div>
+	</body>
+	<script src="functions.js" type="text/javascript"></script>
+	<script src="tests.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+</html>
