@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.test {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.masked {
+  width: 25%;
+  margin: 1em;
+  -webkit-mask-image: paint(mask);
+  mask-image: paint(mask);
+}
+
+.masked:hover, .masked:focus {
+  --mask-reveal: true;
+}
+
+.masked.square {
+  --mask-shape: square;
+}
+
+.masked.circle {
+  --mask-shape: circle;
+}
+
+.masked.triangle {
+  --mask-shape: triangle;
+}
+
+@media (max-width: 600px) {
+  .test {
+    flex-direction: column;
+  }
+
+  .masked {
+    width: 50%;
+  }
+}

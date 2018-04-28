@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+
+:root {
+  --background-color: rgb(73, 49, 168);
+  --foreground-color: rgb(117, 226, 228);
+  --dropshadow-color: rgba(0, 0, 0, 0.4);
+  --dropshadow-distance: 10;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: var(--foreground-color);
+  text-shadow: var(--dropshadow-color) calc(var(--dropshadow-distance) * 1px) calc(var(--dropshadow-distance) * 1px);
+}
+
+.test {
+  height: 100vh;
+  display: flex;
+  background-color: var(--background-color);
+  background-image: paint(squiggle);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mask | CSS Paint API</title>
+  <link rel="stylesheet" type="text/css" href="styles/mask.css">
+</head>
+
+<body>
+  <div class="test">
+    <img src="images/test.jpg" class="masked circle" />
+    <img src="images/test.jpg" class="masked square" />
+    <img src="images/test.jpg" class="masked triangle" />
+  </div>
+  <script>
+    // Check browser support for CSS Paint API
+    if ('paintWorklet' in CSS) {
+      CSS.paintWorklet.addModule('scripts/mask.js');
+    }
+  </script>
+</body>
+
+</html>
