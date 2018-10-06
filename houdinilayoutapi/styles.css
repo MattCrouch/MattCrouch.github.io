@@ -1,0 +1,12 @@
+body {
+  /* Apply layout */
+  display: layout(masonry);
+  --padding: 20;
+  --columns: 3;
+}
+
+div > img {
+  /* Slight formatting for masonry effect */
+  display: block;
+  max-width: 100%;
+}
