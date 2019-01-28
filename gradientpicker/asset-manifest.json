@@ -1,11 +1,11 @@
 {
-  "main.js": "/static/js/main.82d30764.chunk.js",
-  "main.js.map": "/static/js/main.82d30764.chunk.js.map",
-  "static/js/1.d30ebab6.chunk.js": "/static/js/1.d30ebab6.chunk.js",
-  "static/js/1.d30ebab6.chunk.js.map": "/static/js/1.d30ebab6.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.236d71a1fd7c580f27d795d4be66c057.js": "/precache-manifest.236d71a1fd7c580f27d795d4be66c057.js",
-  "service-worker.js": "/service-worker.js"
+  "main.js": "/gradientpicker/static/js/main.82d30764.chunk.js",
+  "main.js.map": "/gradientpicker/static/js/main.82d30764.chunk.js.map",
+  "static/js/1.d30ebab6.chunk.js": "/gradientpicker/static/js/1.d30ebab6.chunk.js",
+  "static/js/1.d30ebab6.chunk.js.map": "/gradientpicker/static/js/1.d30ebab6.chunk.js.map",
+  "runtime~main.js": "/gradientpicker/static/js/runtime~main.05685f73.js",
+  "runtime~main.js.map": "/gradientpicker/static/js/runtime~main.05685f73.js.map",
+  "index.html": "/gradientpicker/index.html",
+  "precache-manifest.24c1b6b88c179ed6f407e421b1c0eb8c.js": "/gradientpicker/precache-manifest.24c1b6b88c179ed6f407e421b1c0eb8c.js",
+  "service-worker.js": "/gradientpicker/service-worker.js"
 }
