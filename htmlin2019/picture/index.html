@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>&lt;picture&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;picture&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <picture>
+          <source
+            srcset="images/2x-landscape.jpg 2x, images/1x-landscape.jpg 1x"
+            media="(min-width: 50rem)"
+          />
+          <source srcset="images/2x-square.jpg 2x, images/1x-square.jpg 1x" />
+          <img src="images/1x-landscape.jpg" />
+        </picture>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;picture&gt;
+  &lt;source
+    srcset=&quot;images/2x-landscape.jpg 2x, images/1x-landscape.jpg 1x&quot;
+    media=&quot;(min-width: 50rem)&quot;
+  /&gt;
+  &lt;source srcset=&quot;images/2x-square.jpg 2x, images/1x-square.jpg 1x&quot; /&gt;
+  &lt;img src=&quot;images/1x-landscape.jpg&quot; /&gt;
+&lt;/picture&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          An element containing one or more
+          <code>&lt;source&gt;</code> elements. Each
+          <code>&lt;source&gt;</code> describes a version of this image that
+          should be displayed.
+        </p>
+
+        <p>
+          There should always be a final <code>&lt;img&gt;</code> to make sure
+          an image displays if none of those conditions match, or it's being
+          used in a browser that does not support <code>&lt;picture&gt;</code>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

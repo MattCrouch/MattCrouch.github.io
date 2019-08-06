@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <title>&lt;time&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;time&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <p>
+          Generate CSS is happening on the
+          <time datetime="2019-09-26">26th September</time>!
+        </p>
+
+        <p>
+          Don't forget that registration opens at
+          <time datetime="2019-09-26 09:30">9:30am</time> with the opening
+          keynote happening
+          <time datetime="2019-09-26 10:05">just after 10am</time>.
+        </p>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;p&gt;
+  Generate CSS is happening on the
+  &lt;time datetime=&quot;2019-09-26&quot;&gt;26th September&lt;/time&gt;!
+&lt;/p&gt;
+
+&lt;p&gt;
+  Don&apos;t forget that registration opens at
+  &lt;time datetime=&quot;2019-09-26 09:30&quot;&gt;9:30am&lt;/time&gt; with the opening
+  keynote happening
+  &lt;time datetime=&quot;2019-09-26 10:05&quot;&gt;just after 10am&lt;/time&gt;.
+&lt;/p&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          While computers are getting smarter than ever, it can still be
+          difficult to extract a time from a regular sentence. By wrapping any
+          date or time reference in a <code>&lt;time&gt;</code> element, we can
+          provide a more machine-friendly format to computers.
+        </p>
+
+        <p>
+          The <code>datetime</code> attribute contains a timestamp in a format
+          defined by
+          <a
+            href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#datetime-value"
+            rel="noopener noreferrer"
+            target="_blank"
+            >the specification</a
+          >. This can include dates, times, timezones and more.
+        </p>
+
+        <p>
+          <code>&lt;time&gt;</code> can be used without a
+          <code>datetime</code> attribute, but its content must adhere to the
+          same specification.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

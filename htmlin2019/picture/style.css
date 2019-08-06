@@ -1,0 +1,10 @@
+picture,
+picture > * {
+  max-width: 100%;
+}
+
+picture,
+img {
+  display: block;
+  margin: 0 auto;
+}

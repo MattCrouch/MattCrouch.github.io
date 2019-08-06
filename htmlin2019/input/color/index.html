@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/global.css" />
+    <title>&lt;input type="color"&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;input type="color"&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <label for="color">Favourite colour</label>
+        <input type="color" id="color" value="#0471A6" />
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;input type=&quot;color&quot; id=&quot;color&quot; value=&quot;#0471A6&quot; /&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          The <code>color</code> type allows the user to select a hex colour
+          value by using the browsers native picker. The interface can vary
+          depending on the device and operating system.
+        </p>
+
+        <p>
+          Only hex values are valid. There is no support for CSS colour names
+          (<code>black</code>), function colours (<code>hsl(200, 95%, 33%)</code
+          >) or any alpha channel (<code>#0471A688</code>).
+        </p>
+
+        <p>
+          This can also be combined with
+          <a href="../../datalist/index.html"><code>&lt;datalist&gt;</code></a>
+          in supported browsers to provide some preset colours to pick from.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

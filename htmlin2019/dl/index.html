@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <title>&lt;dl&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;dl&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <dl>
+          <dt>Hypertext</dt>
+          <dd>
+            Text created for use on computer screens with links to other text
+            related to that content.
+          </dd>
+          <dt>Markup</dt>
+          <dd>
+            The process of annotating text to separate and give meaning to
+            individual parts without breaking up the original flow.
+          </dd>
+          <dt>Language</dt>
+          <dd>
+            A means of communication allowing meaningful information to be
+            passed between two parties.
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Hypertext&lt;/dt&gt;
+  &lt;dd&gt;
+    Text created for use on computer screens with links to other text
+    related to that content.
+  &lt;/dd&gt;
+  &lt;dt&gt;Markup&lt;/dt&gt;
+  &lt;dd&gt;
+    The process of annotating text to separate and give meaning to
+    individual parts without breaking up the original flow.
+  &lt;/dd&gt;
+  &lt;dt&gt;Language&lt;/dt&gt;
+  &lt;dd&gt;
+    A means of communication allowing meaningful information to be
+    passed between two parties.
+  &lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          The content inside a <code>&lt;dl&gt;</code> element is a series of
+          terms and definitions important to the reader - "<dfn>dl</dfn>" stands
+          for "description list".
+        </p>
+
+        <p>
+          There are two other elements inside. <code>&lt;dt&gt;</code> contains
+          the term being defined, while the <code>&lt;dd&gt;</code> immediately
+          after describes it.
+        </p>
+
+        <p>
+          There can be multiple terms for the same definition and vice-versa.
+          The connection between them comes from the ordering in the markup.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

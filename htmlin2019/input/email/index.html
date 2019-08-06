@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/global.css" />
+    <script defer src="../forms.js"></script>
+    <title>&lt;input type="email"&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;input type="email"&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <form>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            multiple
+            pattern=".+@example.com"
+            required
+            title="Enter an @example.com address only"
+          />
+          <input type="submit" />
+        </form>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;input
+  type=&quot;email&quot;
+  multiple
+  pattern=&quot;.+@example.com&quot;
+  required
+  title=&quot;Enter an @example.com address only&quot;
+/&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          The <code>email</code> type is useful when collecting email addresses.
+          It requires they fit the pre-defined format of an email address
+          without requiring any JavaScript validation.
+        </p>
+
+        <p>
+          It can take an optional <code>pattern</code> attribute in order to
+          provide more strict matching. Make sure to also supply a
+          <code>title</code> attribute alongside it so the browser can tell the
+          user why their input is not valid.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

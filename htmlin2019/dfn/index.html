@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <title>&lt;dfn&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;dfn&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <p>
+          The <dfn id="dom">Document Object Model</dfn> describes the structure
+          and content for each page in the browser.
+        </p>
+      </section>
+
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;p&gt;
+  The &lt;dfn id="dom"&gt;Document Object Model&lt;/dfn&gt; describes the structure and
+  content for each page in the browser.
+&lt;/p&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          The <code>&lt;dfn&gt;</code> element marks this part of the document
+          as having a definiton of a term. The content inside is the term being
+          defined.
+        </p>
+
+        <p>
+          The content of the surrounding block level element such as
+          <code>&lt;p&gt;</code> is inferred to be the definition of that term.
+        </p>
+
+        <p>
+          The <code>id</code> attribute allows linking to a specific definition
+          in the document. If a reference to an unfamiliar term such as the
+          <a href="#dom">DOM</a> comes up later on, the user can be directed
+          straight to its definition.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

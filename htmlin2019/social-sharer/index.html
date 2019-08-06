@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <script src="social-sharer.js"></script>
+    <title>&lt;social-sharer&gt; custom element - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;social-sharer&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <social-sharer
+          url="https://www.creativebloq.com/features/web-components"
+        ></social-sharer>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;social-sharer url=&quot;https://www.creativebloq.com/features/web-components&quot;&gt;&lt;/social-sharer&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          When repeating common patterns and there is no native equivilant
+          available, it may be worth looking into creating a custom element.
+        </p>
+
+        <p>
+          A custom element is written in JavaScript and loaded into the page. It
+          is then used like any other HTML element and acts just the same.
+        </p>
+
+        <p>
+          This example creates a <code>&lt;social-sharer&gt;</code> element.
+          When passed a URL it generates a link to share it on Facebook, Twitter
+          and LinkedIn.
+        </p>
+
+        <p>
+          To see how it works, take a look at the
+          <a href="social-sharer.js">custom element class</a>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

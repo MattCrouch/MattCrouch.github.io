@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <title>&lt;datalist&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;datalist&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <label for="framework">Framework</label>
+        <input type="text" id="framework" list="framework-options" />
+
+        <datalist id="framework-options">
+          <option value="Angular"> </option>
+          <option value="Aurelia"> </option>
+          <option value="Ember"> </option>
+          <option value="Meteor"> </option>
+          <option value="React"> </option>
+          <option value="Vue"> </option>
+          <option value="Svelte"> </option>
+        </datalist>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;datalist id=&quot;framework-options&quot;&gt;
+  &lt;option value=&quot;Angular&quot;&gt;
+  &lt;option value=&quot;Aurelia&quot;&gt;
+  &lt;option value=&quot;Ember&quot;&gt;
+  &lt;option value=&quot;Meteor&quot;&gt;
+  &lt;option value=&quot;React&quot;&gt;
+  &lt;option value=&quot;Vue&quot;&gt;
+  &lt;option value=&quot;Svelte&quot;&gt;
+&lt;/datalist&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          An element containing one or more
+          <code>&lt;option&gt;</code> elements, which define selectable values
+          within the list.
+        </p>
+
+        <p>
+          On its own it shows nothing. This list needs connected to another
+          element, such as an <code>&lt;input&gt;</code>, which can then read
+          and make use of these options.
+        </p>
+
+        <p>
+          The interface can vary slightly based on the browser and device being
+          used. Touchscreen devices are more likely to provide option values
+          upfront on screen to save typing.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>&lt;figure&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;figure&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <figure>
+          <img alt="palm trees" src="palm-trees.jpg" />
+          <figcaption>Palm trees in Olhos de Água, Portugal</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;figure&gt;
+  &lt;img alt=&quot;palm trees&quot; src=&quot;palm-trees.jpg&quot; /&gt;
+  &lt;figcaption&gt;Palm trees in Olhos de &Aacute;gua, Portugal&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          A <code>&lt;figure&gt;</code> represents some self-contained content
+          that has some reference to the content of the page.
+        </p>
+
+        <p>
+          The difference between this and <code>&lt;img&gt;</code> or other
+          content is that <code>&lt;figure&gt;</code> can be moved anywhere in
+          the document and still make sense on its own. Others rely on the
+          context surrounding them to have meaning.
+        </p>
+
+        <p>
+          An optional <code>&lt;figcaption&gt;</code> can add a visual
+          description or reference to the figure being displayed.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

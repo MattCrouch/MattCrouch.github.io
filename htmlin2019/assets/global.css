@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #050505;
+  --action-color: #6e2594;
+  --highlight-color: #48e5c2;
+  --white: #fdfdfd;
+}
+
+html {
+  background: var(--white);
+  color: var(--black);
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+nav {
+  padding: 1rem 0 0;
+}
+
+a {
+  color: var(--action-color);
+  border-bottom: 0.125rem solid var(--action-color);
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+label {
+  display: block;
+}
+
+input {
+  padding: 0.25rem;
+}
+
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: var(--action-color);
+  color: var(--white);
+  cursor: pointer;
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 0 2rem;
+}
+
+main.container {
+  padding-bottom: 2rem;
+}

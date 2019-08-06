@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <title>&lt;details&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;details&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <details>
+          <summary>What is semantic HTML?</summary>
+          <p>
+            There are many different elements that HTML provides that convey
+            meaning to a document.
+          </p>
+          <p>
+            &lt;form&gt; for example is a semantic element that will mark that
+            the contents inside of it as an interactive form. The browser and
+            the user know what the content should be like here.
+          </p>
+          <p>
+            &lt;div&gt; for example is <em>not</em> a semantic element. It has
+            no implied meaning and is used as a generic container when other
+            elements are unsuitable.
+          </p>
+          <p>
+            Writing semantic HTML requires developers to make use of as many
+            correct semantic elements as possible to make sure the document
+            outline can be understood without having to see it on screen.
+          </p>
+        </details>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;details&gt;
+  &lt;summary&gt;What is semantic HTML?&lt;/summary&gt;
+  &lt;p&gt;
+    There are many different elements that HTML provides that convey
+    meaning to a document.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;form&gt; for example is a semantic element that will mark that
+    the contents inside of it as an interactive form. The browser and
+    the user know what the content should be like here.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;div&gt; for example is not a semantic element. It has
+    no implied meaning and is used as a generic container when other
+    elements are unsuitable.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Writing semantic HTML requires developers to make use of as many
+    correct semantic elements as possible to make sure the document
+    outline can be understood without having to see it on screen.
+  &lt;/p&gt;
+&lt;/details&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          This element would be used when information you want available to the
+          user should be able to be hidden. Typically this would be for an FAQ
+          section or longer content separate from the main body of the text.
+        </p>
+
+        <p>
+          While <code>&lt;details&gt;</code> is the container, the interactive
+          part comes from the content of the
+          <code>&lt;summary&gt;</code> element. This acts as a title as well as
+          a handle to open and close the content.
+        </p>
+
+        <p>
+          <code>&lt;details&gt;</code> elements are a great way to be able to
+          toggle content without having to rely on JavaScript.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

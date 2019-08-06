@@ -1,0 +1,23 @@
+dialog#js-powered {
+  border: none;
+}
+
+dialog#js-powered::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+dialog#js-powered .options {
+  display: flex;
+  margin: 1rem 0;
+}
+
+dialog#js-powered .options > input {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+#dialog-output {
+  display: inline-block;
+  font-weight: bold;
+  margin: 1rem 0;
+}

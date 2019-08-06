@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="dialog.js"></script>
+    <title>&lt;dialog&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;dialog&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <dialog id="html-powered">
+          <p>
+            This is a HTML-powered dialog box. Its <code>open</code> attribute
+            is set.
+          </p>
+        </dialog>
+
+        <dialog id="js-powered">
+          <form method="dialog">
+            Do you accept the terms and conditions?
+            <div class="options">
+              <input type="submit" value="Yes" />
+              <input type="submit" value="No" />
+            </div>
+          </form>
+        </dialog>
+
+        <button class="show-dialog html">Show HTML-powered dialog box</button>
+        <button class="show-dialog js">
+          Show Javascript-powered dialog box
+        </button>
+
+        <span id="dialog-output"></span>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;dialog&gt;
+  &lt;p&gt;This is a HTML-powered dialog box. Its open attribute is set.&lt;/p&gt;
+&lt;/dialog&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          Dialog boxes (sometimes referred to as "modals") are a common pattern
+          on the web. They appear as an interactive container, typically in the
+          centre of the page.
+        </p>
+
+        <p>
+          In HTML, the <code>&lt;dialog&gt;</code> is a container that appears
+          separate from the rest of the page. It can have the
+          <code>open</code> attribute, which determines whether that dialog box
+          is open or not. These types of boxes cannot block the page underneath
+          them.
+        </p>
+
+        <p>
+          <code>&lt;dialog&gt;</code> elements become more powerful when
+          combined with JavaScript. The <code>showModal</code> method allows the
+          content underneath it to be covered and force a response. This can be
+          customised by styling the <code>::backdrop</code> pseudo-element.
+        </p>
+
+        <p>
+          Forms within a <code>&lt;dialog&gt;</code> can have a
+          <code>method</code> of <code>dialog</code>. Submitting the form closes
+          the dialog and sets the <code>returnValue</code> property on the
+          dialog element to the value submitted from the form.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

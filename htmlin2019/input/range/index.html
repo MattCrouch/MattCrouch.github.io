@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/global.css" />
+    <title>&lt;input type="range"&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;input type="range"&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <label for="range">Volume</label>
+        <input type="range" id="range" min="0" max="11" />
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;input type=&quot;range&quot; id=&quot;range&quot; min=&quot;0&quot; max=&quot;11&quot; /&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          The <code>range</code> type presents a less precise way of entering a
+          number. This is ideal for interfaces where the ease of entering
+          outweighs the need for a specific value, such as a volume slider.
+        </p>
+
+        <p>
+          <code>min</code> and <code>max</code> attributes denote the lower and
+          upper bounds for the <code>value</code>. Any value provided outside of
+          these bounds will be clipped.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

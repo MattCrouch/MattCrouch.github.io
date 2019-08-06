@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/global.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>&lt;menu&gt; - HTML in 2019</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="../index.html">Back to index</a>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>&lt;menu&gt;</h1>
+      </header>
+      <section>
+        <h2>Example</h2>
+        <menu type="toolbar">
+          <li><button id="cut">Cut</button></li>
+          <li><button id="copy">Copy</button></li>
+          <li><button id="paste">Paste</button></li>
+        </menu>
+      </section>
+      <section>
+        <h2>Usage</h2>
+        <pre><code>&lt;menu type="toolbar"&gt;
+  &lt;li&gt;&lt;button id=&quot;cut&quot;&gt;Cut&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button id=&quot;copy&quot;&gt;Copy&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button id=&quot;paste&quot;&gt;Paste&lt;/button&gt;&lt;/li&gt;
+&lt;/menu&gt;</code></pre>
+      </section>
+      <section>
+        <h2>Description</h2>
+        <p>
+          The <code>&lt;menu&gt;</code> element is designed to be the
+          interactive equivalent to the <code>&lt;ul&gt;</code> element. It
+          represents a list of actions a user could take as part of an
+          application.
+        </p>
+
+        <p>
+          The original goal of <code>&lt;menu&gt;</code> was quite far-reaching.
+          In addition to <code>toolbar</code> there was also a
+          <code>context</code> type, which included values inside the context
+          menu (also known as the right-click menu). More recently, plans were
+          scaled back and this is no longer part of the specification.
+        </p>
+
+        <p>
+          Now <code>&lt;menu&gt;</code> is more of a semantic tool. The
+          implementation of the interface is left up to the developer. For
+          example, nested <code>&lt;menu&gt;</code> elements could be used to
+          simulate native menu bar nesting.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
