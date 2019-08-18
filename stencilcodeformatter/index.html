@@ -1,4 +1,33 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>code-highlighter example</title> <script type="module" src="/build/codehighlighter.esm.js"></script> <link rel="stylesheet" href="/build/codehighlighter.css"> <script nomodule="" src="/build/codehighlighter.js"></script> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;display=swap"> </head> <body> <article class="container"> <header> <h1>Creating components with Stencil</h1> </header> <p> Stencil is a compiler for web components. It allows developers to create
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>code-highlighter example</title> <script type="module" src="/build/codehighlighter.esm.js"></script> <style>/* Styling for the example only */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Quicksand, sans-serif;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.container {
+  width: 60%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+</style> <script nomodule="" src="/build/codehighlighter.js"></script> <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;display=swap"> </head> <body> <article class="container"> <header> <h1>Creating components with Stencil</h1> </header> <p> Stencil is a compiler for web components. It allows developers to create
         custom elements for their website while also allowing the use of common
         developer tools such as JSX and TypeScript. </p> <p> Stencil provides a great command-line tool to get started. Build out a
         project by running <code>npm init stencil</code> on the command line and
@@ -51,13 +80,4 @@ export class MyComponent {
         Stencil provides an index page to demo a component to try it out. </p> <code-highlighter filename="index.html" language="html"> <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> </code-highlighter> <p> When built, Stencil generates a file that can be dropped in to any
         project and use the component without having to worry about its inner
         workings. This includes other Stencil projects, regular HTML pages and
-        also other JavaScript frameworks such as React, Vue and Angular. </p> </article> <script>
-if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  // auto-unregister service worker during dev mode
-  navigator.serviceWorker.getRegistration().then(function(registration) {
-    if (registration) {
-      registration.unregister().then(function() { location.reload(true) });
-    }
-  });
-}
-</script></body></html>
+        also other JavaScript frameworks such as React, Vue and Angular. </p> </article> </body></html>
