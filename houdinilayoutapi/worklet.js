@@ -8,14 +8,15 @@ class MasonryWorklet {
     return ["--padding", "--columns"];
   }
 
-  *intrinsicSizes() {
+  async intrinsicSizes() {
     /* TODO implement :) */
   }
-  *layout(children, edges, constraints, styleMap) {
+
+  async layout(children, edges, constraints, styleMap) {
     const inlineSize = constraints.fixedInlineSize;
 
     const padding = parseInt(styleMap.get("--padding").toString());
-    const columnValue = styleMap.get("--columns").toString();
+    const columnValue = parseInt(styleMap.get("--columns").toString());
 
     // We also accept 'auto', which will select the BEST number of columns.
     let columns = parseInt(columnValue);
@@ -25,9 +26,11 @@ class MasonryWorklet {
 
     // Layout all children with simply their column size.
     const childInlineSize = (inlineSize - (columns + 1) * padding) / columns;
-    const childFragments = yield children.map(child => {
-      return child.layoutNextFragment({ fixedInlineSize: childInlineSize });
-    });
+    const childFragments = await Promise.all(
+      children.map(child => {
+        return child.layoutNextFragment({ fixedInlineSize: childInlineSize });
+      })
+    );
 
     let autoBlockSize = 0;
     const columnOffsets = Array(columns).fill(0);
