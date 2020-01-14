@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/victoryexample/static/css/main.e486aef1.chunk.css",
+    "main.js": "/victoryexample/static/js/main.1c83a991.chunk.js",
+    "main.js.map": "/victoryexample/static/js/main.1c83a991.chunk.js.map",
+    "runtime-main.js": "/victoryexample/static/js/runtime-main.313a0add.js",
+    "runtime-main.js.map": "/victoryexample/static/js/runtime-main.313a0add.js.map",
+    "static/css/2.764ccc25.chunk.css": "/victoryexample/static/css/2.764ccc25.chunk.css",
+    "static/js/2.5d692e05.chunk.js": "/victoryexample/static/js/2.5d692e05.chunk.js",
+    "static/js/2.5d692e05.chunk.js.map": "/victoryexample/static/js/2.5d692e05.chunk.js.map",
+    "index.html": "/victoryexample/index.html",
+    "precache-manifest.9d88f25696b0e72bee61bb043e942885.js": "/victoryexample/precache-manifest.9d88f25696b0e72bee61bb043e942885.js",
+    "service-worker.js": "/victoryexample/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/victoryexample/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.e486aef1.chunk.css.map": "/victoryexample/static/css/main.e486aef1.chunk.css.map",
+    "static/js/2.5d692e05.chunk.js.LICENSE": "/victoryexample/static/js/2.5d692e05.chunk.js.LICENSE",
+    "static/media/heading-arrow.svg": "/victoryexample/static/media/heading-arrow.0824148b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.313a0add.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.5d692e05.chunk.js",
+    "static/css/main.e486aef1.chunk.css",
+    "static/js/main.1c83a991.chunk.js"
+  ]
+}
