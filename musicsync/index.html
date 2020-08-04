@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 Audio Time Sync</title>
+    <style type="text/css">
+      #player {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      audio {
+        width: 50%;
+        margin: 0 25%;
+      }
+
+      #output {
+        width: 100%;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player">
+      <audio autoplay controls>
+        <source src="song.mp3" type="audio/mpeg" />
+        <track
+          src="track.vtt"
+          label="English subtitles"
+          kind="subtitles"
+          srclang="en"
+          default
+        />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div id="output"></div>
+
+    <script>
+      var audioEl = document.querySelector("audio");
+      var outputEl = document.querySelector("#output");
+
+      audioEl.textTracks[0].addEventListener("cuechange", function () {
+        outputEl.innerText = "";
+
+        if (this.activeCues !== null) {
+          for (var i = 0; i < this.activeCues.length; i++) {
+            if (this.activeCues[i] !== undefined) {
+              var textEl = document.createElement("div");
+              textEl.innerText = this.activeCues[i].text;
+
+              outputEl.appendChild(textEl);
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
