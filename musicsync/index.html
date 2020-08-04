@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML5 Audio Time Sync</title>
     <style type="text/css">
       #player {
@@ -31,8 +32,8 @@
         <source src="song.mp3" type="audio/mpeg" />
         <track
           src="track.vtt"
-          label="English subtitles"
-          kind="subtitles"
+          label="English captions"
+          kind="captions"
           srclang="en"
           default
         />
@@ -44,6 +45,8 @@
     <script>
       var audioEl = document.querySelector("audio");
       var outputEl = document.querySelector("#output");
+
+      audioEl.textTracks[0].mode = "showing";
 
       audioEl.textTracks[0].addEventListener("cuechange", function () {
         outputEl.innerText = "";
